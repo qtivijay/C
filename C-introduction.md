@@ -1,6 +1,10 @@
 Table of contents
 - [Microcontroller vs Microprocessor](#-1.Microcontroller-vs-Microprocessor)
 - [Microcontroller vs SOC](#-2.Microcontroller-vs-SOC)
+- [How do you develop software for Microcontroller](#-3.How-do-you-develop-software-for-Microcontroller)
+- [Difference Between Compiler, Assembler, Linker, and Loader (C Program)](#-4.Difference-Between-Compiler,-Assembler,-Linker,-and-Loader) 
+- [Difference Between Compilation Error and Runtime Error](#-5.-Difference-Between-Compilation-Error-and-Runtime-Error)
+
 
 # 1.Microcontroller vs Microprocessor
 ### Microcontroller (MCU)
@@ -60,7 +64,7 @@ A **SoC** integrates **multiple processing units (CPU, GPU, DSP), extensive memo
 - Software development done in host development PC and generate binaries / executables / images.
 - These binaries will be loaded in Target H/W Platform
 
-# 4. Difference Between Compiler, Assembler, Linker, and Loader (C Program)
+# 4.Difference Between Compiler, Assembler, Linker, and Loader
 
 ## 1. Compiler
 - Translates **C source code** into **assembly language**.
@@ -94,4 +98,6 @@ A **SoC** integrates **multiple processing units (CPU, GPU, DSP), extensive memo
 | **Detection** | Identified by the compiler before execution | Occurs while the program is running |
 | **Examples** | Missing semicolon, undeclared variable, incorrect function call | Division by zero, accessing an array out of bounds, null pointer dereference |
 | **Fixing** | Must be corrected before running the program | Requires debugging after execution |
+
+
 
