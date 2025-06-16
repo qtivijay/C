@@ -4,7 +4,8 @@ Table of contents
 - [How do you develop software for Microcontroller](#-3.How-do-you-develop-software-for-Microcontroller)
 - [Difference Between Compiler, Assembler, Linker, and Loader (C Program)](#-4.Difference-Between-Compiler,-Assembler,-Linker,-and-Loader) 
 - [Difference Between Compilation Error and Runtime Error](#-5.-Difference-Between-Compilation-Error-and-Runtime-Error)
-
+- [Relationship Between C Code, Assembly Language, Opcode, and Operand](#-6.Relationship-Between-C-Code,-Assembly-Language,-Opcode,-and-Operand)
+- [vi Editor Cheat Sheet](#-7.vi-Editor-Cheat-Sheet)
 
 # 1.Microcontroller vs Microprocessor
 ### Microcontroller (MCU)
@@ -161,3 +162,111 @@ E0802001  ; ADD R2, R0, R1
 Kiel IDE which has text editor , compiler , linker/loader , debugger which is used for
 software development of Microcontroller and not for SOC
 ```
+# 7.vi Editor Cheat Sheet
+
+## Introduction
+The `vi` editor is a powerful text editor available on Unix-based systems. It operates in **two primary modes**:
+1. **Command Mode** – Used for administrative tasks like saving, exiting, cutting, copying, pasting, replacing, and searching.
+2. **Insert Mode** – Used for writing and editing text.
+
+By default, the `vi` editor opens in **Command Mode**.
+
+---
+
+## Opening a File
+To open or create a file using `vi`, use the following command:
+```sh
+vi filename
+```
+If the file exists, it will open in **Command Mode**.
+
+---
+
+## Switching Between Modes
+- **Command Mode → Insert Mode**  
+  Press one of the following keys:
+  - `i` (insert at cursor)
+  - `a` (append after cursor)
+  - `o` (open a new line below)
+  - `O` (open a new line above)
+
+- **Insert Mode → Command Mode**  
+  Press the `ESC` key.
+
+---
+
+## Basic Operations
+### Exiting `vi`
+| Command       | Description                |
+|--------------|----------------------------|
+| `:q`         | Quit without saving        |
+| `:q!`        | Quit and discard changes   |
+| `:wq` or `ZZ` | Save and exit              |
+
+### Saving Changes
+| Command | Description |
+|---------|-------------|
+| `:w`    | Save file   |
+
+**Note:** Save operations cannot be performed in **Insert Mode**. Press `ESC` first to return to **Command Mode** before saving.
+
+---
+
+## Editing Text
+### Inserting and Appending
+| Command | Description |
+|---------|-------------|
+| `i`     | Insert text at cursor |
+| `I`     | Insert at the beginning of the line |
+| `a`     | Append after cursor |
+| `A`     | Append at the end of the line |
+| `o`     | Open a new line below |
+| `O`     | Open a new line above |
+
+### Deleting and Copying
+| Command | Description |
+|---------|-------------|
+| `x`     | Delete character under cursor |
+| `dw`    | Delete a word |
+| `dd`    | Delete the current line |
+| `yy`    | Copy the current line |
+| `p`     | Paste copied/deleted content |
+
+---
+
+## Searching and Navigation
+| Command | Description |
+|---------|-------------|
+| `/pattern`  | Search forward for "pattern" |
+| `?pattern`  | Search backward for "pattern" |
+| `n`         | Repeat search in same direction |
+| `N`         | Repeat search in opposite direction |
+| `G`         | Jump to the last line |
+| `gg`        | Jump to the first line |
+| `Ctrl + f`  | Scroll forward one screen |
+| `Ctrl + b`  | Scroll backward one screen |
+
+---
+
+## Undo and Redo
+| Command | Description |
+|---------|-------------|
+| `u`     | Undo last change |
+| `Ctrl + r` | Redo undone change |
+
+---
+
+## Miscellaneous Commands
+| Command | Description |
+|---------|-------------|
+| `:set number` | Show line numbers |
+| `:set nonumber` | Hide line numbers |
+| `:%s/old/new/g` | Replace "old" with "new" in the entire file |
+
+---
+
+## Summary
+The `vi` editor is a versatile tool widely used for editing files in Linux environments. Mastering its modes and commands enhances productivity, making it an essential skill for developers and system administrators.
+
+
+
