@@ -99,5 +99,65 @@ A **SoC** integrates **multiple processing units (CPU, GPU, DSP), extensive memo
 | **Examples** | Missing semicolon, undeclared variable, incorrect function call | Division by zero, accessing an array out of bounds, null pointer dereference |
 | **Fixing** | Must be corrected before running the program | Requires debugging after execution |
 
+# Opcode and Operand in C Programming
 
+## 1. **Opcode and Operand**
+In **C programming**, while we don’t directly interact with **opcodes and operands**, they are fundamental concepts in assembly language and machine-level programming.
 
+## 2. **Definitions**
+- **Opcode (Operation Code)**: Specifies the operation to be performed by the processor. Example: `ADD`, `MOV`, `SUB`.
+- **Operand**: Represents the **data** or **memory location** on which the operation is performed.
+
+## 3. **Example**
+Assembly instruction:
+```assembly
+ADD R1, R2
+```
+
+# 6.Relationship Between C Code, Assembly Language, Opcode, and Operand
+
+## 1. **Overview**
+- **C programming** is a high-level language that allows structured and readable code.
+- **Assembly language** provides a low-level representation of CPU instructions.
+- **Opcodes and operands** are core components of machine code.
+
+## 2. **Translation Process**
+### **C Code → Assembly Language → Machine Code**
+1. **C Code** is compiled into **assembly language** by a compiler.
+2. **Assembly code** is translated into **machine code** by an assembler.
+3. **Machine code** consists of **opcodes** (instructions) and **operands** (data/memory locations).
+
+### Example:
+c code:
+```c
+#include <stdio.h>
+int main() {
+    int a = 5, b = 10;
+    int sum = a + b;
+    printf("Sum: %d\n", sum);
+    return 0;
+}
+```
+assembly code:
+```assembly
+MOV R0, #5    ; Load value 5 into Register R0
+MOV R1, #10   ; Load value 10 into Register R1
+ADD R2, R0, R1 ; Add R0 and R1, store result in R2
+```
+opcodes and operands:
+```opcode
+E3A00005  ; MOV R0, #5
+E3A0100A  ; MOV R1, #10
+E0802001  ; ADD R2, R0, R1
+```
+
+### Execution Flow
+1. Write code on the development machine.
+2. Compile using a compiler to generate object files.
+3. The linker merges them into an executable.
+4. The loader transfers the executable to the target board, where it runs.
+
+```
+Kiel IDE which has text editor , compiler , linker/loader , debugger which is used for
+software development of Microcontroller and not for SOC
+```
