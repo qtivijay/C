@@ -268,5 +268,24 @@ If the file exists, it will open in **Command Mode**.
 ## Summary
 The `vi` editor is a versatile tool widely used for editing files in Linux environments. Mastering its modes and commands enhances productivity, making it an essential skill for developers and system administrators.
 
+## 🔹 Tip: Termainal keyboard shortcut  
+**Keyword:** `Terminal shot cuts`
 
+Expanding the screen of Terminal
+
+```
+cmd+shift+'+'
+```
+Minimize the screen of  Terminal
+```
+cmd+'-'
+```
+
+- a.out stands for Assembler output
+- gcc sample.c will generate a.out
+- Execute './a.out'
+## 🔹 Interview Question: why we need './' for executable command ./a.out?
+### 📌 Answer:
+- When executing ./a.out, the ./ explicitly tells the shell to look for the executable in the current directory. This is needed because the shell does not search the current directory by default unless it's in $PATH. It also prevents conflicts with other system executables that might have the same name.
+  
 
