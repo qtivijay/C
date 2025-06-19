@@ -229,7 +229,11 @@ If the file exists, it will open in **Command Mode**.
 | `x`     | Delete character under cursor |
 | `dw`    | Delete a word |
 | `dd`    | Delete the current line |
+| '4dd'   | Delete 4 lines |
 | `yy`    | Copy the current line |
+| `2yy`   | Copy two lines |
+| 'yw'    | Copy word |
+| '2yw'   | Copy two words |
 | `p`     | Paste copied/deleted content |
 
 ---
@@ -260,6 +264,7 @@ If the file exists, it will open in **Command Mode**.
 | Command | Description |
 |---------|-------------|
 | `:set number` | Show line numbers |
+|  ':25' | move to specific line number|
 | `:set nonumber` | Hide line numbers |
 | `:%s/old/new/g` | Replace "old" with "new" in the entire file |
 
