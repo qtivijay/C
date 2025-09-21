@@ -1,0 +1,4 @@
+- What is Embedded systems ..?
+  - Combination of H/W and S/W to do a specific task is called embedded systems.
+  - Printer
+-
