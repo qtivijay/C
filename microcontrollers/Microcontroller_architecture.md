@@ -1,3 +1,11 @@
+### what is purpose of CPU registers ..?
+### What Does “8-bit”, “16-bit”, or “32-bit” Microcontroller mean ..?
+### What is 8-bit/16-bit timer in micrcontroller mean ..?
+### What is 8-bit I/O port in microcontroller mean ..?
+### What are the interrupt sources in microcontroller ..?
+### what is the difference between i/o port and serial comminication ..?
+### What is the purpose of pullup resistor ..?
+### Difference between interrupt and polling ..?
 
 # Topic - 1
 ---
@@ -154,5 +162,29 @@ This single instruction loads `b` and `c`, adds them, and stores the result in `
 | Example processors    | ARM, MIPS                         | x86, Intel, AMD                   |
 
 ---
+# Topic 4
+---
+purpose of H/W timer with example - 
+```
+TMOD = 0x05;       // Timer 0 in counter mode (external input)
+TH0 = 0; TL0 = 0;  // Clear timer
+TR0 = 1;           // Start Timer 0
 
-If you're working on embedded systems or edge AI, you're likely dealing with **RISC-based processors** like ARM or RISC-V. Want a quick comparison of ARM vs x86 for edge deployments?
+// Wait for some time or event
+TR0 = 0;           // Stop timer
+uint16_t count = (TH0 << 8) | TL0; // Read pulse count
+```
+
+```
+// Pseudocode for software timer
+volatile uint32_t ms_counter = 0;
+
+void timer_isr() {
+    ms_counter++; // Called every 1 ms
+}
+
+void delay_ms(uint32_t ms) {
+    uint32_t start = ms_counter;
+    while ((ms_counter - start) < ms);
+}
+```
